@@ -13,7 +13,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer usuarioId;
+    private long usuarioId;
 
     private String nombre;
     private String email;
@@ -31,11 +31,11 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<Recordatorio> recordatorios;
 
-    public Integer getUsuarioId() {
+    public long getUsuarioId() {
         return usuarioId;
     }
 
-    public void setUsuarioId(Integer usuarioId) {
+    public void setUsuarioId(long usuarioId) {
         this.usuarioId = usuarioId;
     }
 
